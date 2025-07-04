@@ -1,0 +1,35 @@
+[gd_scene load_steps=5 format=3 uid="uid://c4i0yews7o64j"]
+
+[ext_resource type="Texture2D" uid="uid://c3vps65xto5b7" path="res://assets/art/bg/bus_sprite.png" id="1_7fpp7"]
+[ext_resource type="Script" path="res://scenes/bus.gd" id="1_mmepj"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_rp2sa"]
+friction = 0.01
+
+[sub_resource type="CircleShape2D" id="CircleShape2D_2p0ok"]
+
+[node name="Bus" type="RigidBody2D"]
+collision_layer = 0
+mass = 0.1
+physics_material_override = SubResource("PhysicsMaterial_rp2sa")
+can_sleep = false
+angular_velocity = 0.137881
+constant_force = Vector2(37, 0)
+script = ExtResource("1_mmepj")
+
+[node name="BusSprite" type="Sprite2D" parent="."]
+position = Vector2(10, -31)
+scale = Vector2(0.5, 0.5)
+texture = ExtResource("1_7fpp7")
+
+[node name="OnFloorLabel" type="Label" parent="."]
+offset_right = 40.0
+offset_bottom = 23.0
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(-8, -11)
+shape = SubResource("CircleShape2D_2p0ok")
+
+[node name="CollisionShape2D2" type="CollisionShape2D" parent="."]
+position = Vector2(15, -11)
+shape = SubResource("CircleShape2D_2p0ok")

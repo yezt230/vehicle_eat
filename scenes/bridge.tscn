@@ -1,6 +1,9 @@
-[gd_scene load_steps=6 format=3 uid="uid://dkns66ni5ujdi"]
+[gd_scene load_steps=8 format=3 uid="uid://dkns66ni5ujdi"]
 
 [ext_resource type="Texture2D" uid="uid://c3jxwlsep0r1i" path="res://assets/art/bg/bridge.png" id="1_jby2d"]
+
+[sub_resource type="PhysicsMaterial" id="PhysicsMaterial_fyroe"]
+friction = 0.1
 
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_halqe"]
 size = Vector2(689, 26)
@@ -14,7 +17,12 @@ size = Vector2(49.2409, 20)
 [sub_resource type="RectangleShape2D" id="RectangleShape2D_v5s4o"]
 size = Vector2(49.5097, 20)
 
-[node name="Bridge" type="CharacterBody2D"]
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_mjalx"]
+size = Vector2(366, 20)
+
+[node name="Bridge" type="StaticBody2D"]
+collision_mask = 17
+physics_material_override = SubResource("PhysicsMaterial_fyroe")
 
 [node name="Sprite2D" type="Sprite2D" parent="."]
 position = Vector2(209, 112)
@@ -40,3 +48,8 @@ position = Vector2(429, 227)
 rotation = -0.471239
 scale = Vector2(1, 1)
 shape = SubResource("RectangleShape2D_v5s4o")
+
+[node name="CollisionShape2D5" type="CollisionShape2D" parent="."]
+position = Vector2(509, 234)
+shape = SubResource("RectangleShape2D_mjalx")
+disabled = true

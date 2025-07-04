@@ -1,12 +1,15 @@
-[gd_scene load_steps=3 format=3 uid="uid://ns5rvvjf7b1d"]
+[gd_scene load_steps=4 format=3 uid="uid://ns5rvvjf7b1d"]
 
 [ext_resource type="PackedScene" uid="uid://ddth2vy61rr70" path="res://level_1.tscn" id="1_ytkgq"]
-[ext_resource type="Texture2D" uid="uid://c3jxwlsep0r1i" path="res://assets/art/bg/bridge.png" id="2_nhrko"]
+[ext_resource type="PackedScene" uid="uid://dkns66ni5ujdi" path="res://scenes/bridge.tscn" id="2_4pgly"]
+[ext_resource type="PackedScene" uid="uid://c4i0yews7o64j" path="res://scenes/bus.tscn" id="3_fhhjt"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Level1" parent="." instance=ExtResource("1_ytkgq")]
 
-[node name="Bridge" type="Sprite2D" parent="."]
-position = Vector2(186, 274)
-texture = ExtResource("2_nhrko")
+[node name="Bridge" parent="." instance=ExtResource("2_4pgly")]
+position = Vector2(-23, 237)
+
+[node name="Bus" parent="Bridge" instance=ExtResource("3_fhhjt")]
+position = Vector2(1, -91)

@@ -1,15 +1,19 @@
-[gd_scene load_steps=4 format=3 uid="uid://ns5rvvjf7b1d"]
+[gd_scene load_steps=5 format=3 uid="uid://ns5rvvjf7b1d"]
 
 [ext_resource type="PackedScene" uid="uid://ddth2vy61rr70" path="res://level_1.tscn" id="1_ytkgq"]
 [ext_resource type="PackedScene" uid="uid://dkns66ni5ujdi" path="res://scenes/bridge.tscn" id="2_4pgly"]
 [ext_resource type="PackedScene" uid="uid://c4i0yews7o64j" path="res://scenes/bus.tscn" id="3_fhhjt"]
+[ext_resource type="PackedScene" uid="uid://e4c5csfp8f6a" path="res://scenes/macro_pred.tscn" id="4_angyb"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Level1" parent="." instance=ExtResource("1_ytkgq")]
 
 [node name="Bridge" parent="." instance=ExtResource("2_4pgly")]
-position = Vector2(-23, 237)
+position = Vector2(-28, 151)
 
-[node name="Bus" parent="Bridge" instance=ExtResource("3_fhhjt")]
-position = Vector2(1, -91)
+[node name="Bus" parent="." instance=ExtResource("3_fhhjt")]
+position = Vector2(-203, -42)
+
+[node name="MacroPred" parent="." instance=ExtResource("4_angyb")]
+position = Vector2(761, 440)

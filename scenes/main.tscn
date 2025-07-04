@@ -1,7 +1,12 @@
-[gd_scene load_steps=2 format=3 uid="uid://ns5rvvjf7b1d"]
+[gd_scene load_steps=3 format=3 uid="uid://ns5rvvjf7b1d"]
 
 [ext_resource type="PackedScene" uid="uid://ddth2vy61rr70" path="res://level_1.tscn" id="1_ytkgq"]
+[ext_resource type="Texture2D" uid="uid://c3jxwlsep0r1i" path="res://assets/art/bg/bridge.png" id="2_nhrko"]
 
 [node name="Main" type="Node2D"]
 
 [node name="Level1" parent="." instance=ExtResource("1_ytkgq")]
+
+[node name="Bridge" type="Sprite2D" parent="."]
+position = Vector2(186, 274)
+texture = ExtResource("2_nhrko")

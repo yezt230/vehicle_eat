@@ -3,8 +3,9 @@ extends CharacterBody2D
 
 
 func _ready():
-	var bus = get_parent().get_node("Bus")
-	bus.connect("eaten", Callable(self, "_on_bus_eaten"))
+	#var bus = get_parent().get_node("Bus")
+	#bus.connect("eaten", Callable(self, "_on_bus_eaten"))
+	pass
 
 
 func _on_bus_eaten():

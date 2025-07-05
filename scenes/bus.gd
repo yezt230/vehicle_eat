@@ -4,6 +4,7 @@ signal eaten
 
 func _ready():
 	connect("eaten", Callable(self, "_on_bus_eaten"))
+	self.global_position = Vector2(-100, -150)
 
 
 func _integrate_forces(state: PhysicsDirectBodyState2D) -> void:
